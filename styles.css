@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background-color: #FFF8E1;
+}
+
+.landing-container {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tagline {
+    text-align: center;
+}
+
+#headline {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    color: #FF5724;
+    opacity: 0;
+    animation: slideIn 1.5s ease-in-out forwards;
+}
+
+#tagline-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #5D4037;
+    opacity: 0;
+    animation: typeEffect 2s 1s forwards, bounce 0.6s 3s forwards;
+}
+
+.main-content {
+    display: none;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.header {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 0.7;
+    padding-top: 250px;
+    animation: float 3s ease-in-out infinite;
+    background-image: url('header-background.jpg'); /* Add your header background image */
+}
+
+.header-content {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.site-title {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    color: #D84315;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+nav {
+    background-color: #FF5724;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 5px solid #D84315;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    color: #FFCC80;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.map-title, .map-subtitle {
+    color: #D84315;
+    margin-bottom: 10px;
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+.tooltip img {
+    width: 120px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 6px;
+}
+
+#world-map {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#world-map path {
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+#world-map path:hover {
+    fill: #FF5724;
+}
+
+.cuisine-celebration {
+    padding: 40px 20px;
+    background-color: #FFF8E1;
+}
+
+.cuisine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cuisine-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.cuisine-card:hover {
+    transform: translateY(-5px);
+}
+
+.cuisine-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cuisine-card-content {
+    padding: 20px;
+}
+
+.cuisine-card h3 {
+    margin-top: 0;
+    color: #D84315;
+}
+
+.cuisine-card p {
+    color: #5D4037;
+}
+
+.street-food {
+    background-color: #FFCCBC;
+    padding: 40px 20px;
+}
+
+.street-food-slider {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.street-food-item {
+    flex: 0 0 300px;
+    margin-right: 20px;
+    scroll-snap-align: start;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.street-food-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.street-food-item-content {
+    padding: 20px;
+}
+
+.street-food-item h4 {
+    margin-top: 0;
+    color: #D84315;
+}
+
+.street-food-item p {
+    color: #5D4037;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-54px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes typeEffect {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        height: 300px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}

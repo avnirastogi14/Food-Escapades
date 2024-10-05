@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Food Escapades - Discover the world of flavors, restaurants, recipes, and food reviews.">
+    <meta name="keywords" content="Food, Cuisines, Recipes, Food Escapades, Restaurants, Reviews, Cooking">
+    <meta name="author" content="Avni">
+    <title>Food Escapades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="landing-container">
+        <div class="tagline">
+            <h1 id="headline">Food Escapades</h1>
+            <p id="tagline-text">Unleash the Flavors</p>
+        </div>
+    </div>
+    <div class="main-content">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="site-title">Food Escapades</h1>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="#world-cuisines">World Cuisines</a></li>
+                <li><a href="#street-food">Street Food</a></li>
+            </ul>
+        </nav>
+        
+        <div class="map-container">
+            <h3 class="map-title">Hover and Discover</h3>
+            <h5 class="map-subtitle">THE WORLD FAMOUS CUISINES</h5>
+            <svg id="world-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+                <path id="france" d="M300 200 L350 150 L400 200 L350 250 Z" fill="#D1C4E9" />
+                <path id="italy" d="M300 250 L320 230 L340 250 L320 270 Z" fill="#BBDEFB" />
+                <path id="usa" d="M400 200 L450 150 L500 200 L450 250 Z" fill="#FFAB91" />
+                <path id="china" d="M600 150 L650 100 L700 150 L650 200 Z" fill="#FFAB91" />
+                <path id="japan" d="M550 50 L570 30 L590 50 L570 70 Z" fill="#BBDEFB" />
+                <path id="thai" d="M400 200 L420 180 L440 200 L420 220 Z" fill="#D1C4E9" />
+                <path id="korea" d="M490 100 L510 80 L530 100 L510 120 Z" fill="#BBDEFB" />
+                <path id="mexico" d="M400 300 L450 280 L500 300 L450 320 Z" fill="#FFCCBC" />
+                <path id="germany" d="M350 180 L380 160 L410 180 L380 200 Z" fill="#B2EBF2" />
+                <path id="spain" d="M290 250 L310 240 L330 250 L310 260 Z" fill="#FF8A80" />
+                <path id="india" d="M470 220 L490 200 L510 220 L490 240 Z" fill="#FFE0B2" />
+                <path id="brazil" d="M450 300 L470 290 L490 300 L470 310 Z" fill="#A5D6A7" />
+                <path id="russia" d="M580 180 L610 160 L640 180 L610 200 Z" fill="#C5CAE9" />
+                <path id="egypt" d="M670 200 L690 180 L710 200 L690 220 Z" fill="#FFE57F" />
+            </svg>
+            <div id="tooltip" class="tooltip">
+                <img id="cuisine-image" src="" alt="" style="display: none; width: 100px; height: auto;">
+                <span id="cuisine-text">Cuisine Info</span>
+            </div>
+        </div>
+        
+        <section id="world-cuisines" class="cuisine-celebration">
+            <h2>Celebrating World Cuisines</h2>
+            <div class="cuisine-grid">
+                <div class="cuisine-card">
+                    <img src="french.jpg" alt="French Cuisine">
+                    <div class="cuisine-card-content">
+                        <h3>French Cuisine</h3>
+                        <p>Indulge in the elegance of French gastronomy, from buttery croissants to exquisite coq au vin.</p>
+                    </div>
+                </div>
+                <div class="cuisine-card">
+                    <img src="japan.jpg" alt="Japanese Cuisine">
+                    <div class="cuisine-card-content">
+                        <h3>Japanese Cuisine</h3>
+                        <p>Experience the harmony of flavors in Japanese dishes, from sushi to comforting ramen.</p>
+                    </div>
+                </div>
+                <div class="cuisine-card">
+                    <img src="italian.jpg" alt="Italian Cuisine">
+                    <div class="cuisine-card-content">
+                        <h3>Italian Cuisine</h3>
+                        <p>Savor the rich flavors of Italy, from authentic pasta dishes to wood-fired Neapolitan pizzas.</p>
+                    </div>
+                </div>
+                <div class="cuisine-card">
+                    <img src="indian.jpg" alt="Indian Cuisine">
+                    <div class="cuisine-card-content">
+                        <h3>Indian Cuisine</h3>
+                        <p>Embark on a spice journey with Indian cuisine, from creamy curries to tandoori specialties.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="street-food" class="street-food">
+            <h2>Street Food Around the World</h2>
+            <div class="street-food-slider">
+                <div class="street-food-item">
+                    <img src="tacos.jpg" alt="Tacos al Pastor">
+                    <div class="street-food-item-content">
+                        <h4>Tacos al Pastor - Mexico</h4>
+                        <p>Savor the flavors of marinated pork cooked on a vertical rotisserie, served in soft corn tortillas.</p>
+                    </div>
+                </div>
+                <div class="street-food-item">
+                    <img src="pad-thai.jpg" alt="Pad Thai">
+                    <div class="street-food-item-content">
+                        <h4>Pad Thai - Thailand</h4>
+                        <p>Enjoy this iconic stir-fried rice noodle dish with a perfect balance of sweet, sour, and umami flavors.</p>
+                    </div>
+                </div>
+                <div class="street-food-item">
+                    <img src="falafel.jpg" alt="Falafel">
+                    <div class="street-food-item-content">
+                        <h4>Falafel - Middle East</h4>
+                        <p>Bite into crispy, herb-filled chickpea fritters, a staple of Middle Eastern street food.</p>
+                    </div>
+                </div>
+                <div class="street-food-item">
+                    <img src="poutine.jpg" alt="Poutine">
+                    <div class="street-food-item-content">
+                        <h4>Poutine - Canada</h4>
+                        <p>Indulge in this hearty Canadian dish of crispy fries topped with gravy and cheese curds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
